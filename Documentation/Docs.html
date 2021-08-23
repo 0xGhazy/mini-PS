@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>mini-PS Documentation</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <script>
+            function openPage(pageName, elmnt, color) {
+  // Hide all elements with class="tabcontent" by default */
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove the background color of all tablinks/buttons
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+
+  // Show the specific tab content
+  document.getElementById(pageName).style.display = "block";
+
+  // Add the specific color to the button used to open the tab content
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+        </script>
+
+        <center>
+            <img src="imgs/img.jpg" width="100%">
+            <h1>Project Documentation</h1>
+            <br>
+        </center>
+
+
+
+        <h2>Table of Content:</h2>
+            <ul>
+                <li>Project Overview</li>
+                <li>Project Timeline</li>
+                <li>Technologies and Techniques</li>
+                <li>Games</li>
+                <li>GUI</li>
+                <li>Team members and Roles</li>
+                <li>References</li>
+            </ul>
+
+
+        
+
+
+        <h2>Project Overview</h2>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp; Welcome to mini-PS, Our project is an open source mini-PlayStation application that contains 4 open source games <b>(Alien invasion-Flappy Bird - Snake-Tic Tac Toe)</b>,
+                whose source code has been Refactored by team members to add the ability to control the settings available in each game by a simple graphical user inter face (GUI) Based on Tkinter and PyQt5.<br><br>
+            </p>
+
+
+
+
+
+        <h2>Project Timeline</h2>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;In this section, you will find the path of events from the beginning of the division of project tasks to the process of reaching this form at the end.
+            </p>
+            <div class="timeline">
+                    <div class="container left">
+                    <div class="content">
+                        <h2>20th August</h2>
+                        <p>Assign tasks to team members equally. Everyone participates in writing the source code</p>
+                    </div>
+            </div>
+            
+            <div class="container right">
+                    <div class="content">
+                        <h2>22th August</h2>
+                        <p>Examining what has been accomplished from the project and making the necessary improvements to meet the requirements of the conditions for accepting the project in the college.</p>
+                        <img src="imgs/motivation.PNG" hight="300px" width="100%">
+                    </div>
+            </div>
+
+            <div class="container left">
+                        <div class="content">
+                        <h2>23th August</h2>
+                        <p>Creating Games edit sittings frames to meet the new project idea.</p>
+                        </div>
+            </div>
+
+            <div class="container right">
+                        <div class="content">
+                        <h2>24th August</h2>
+                        <p>Starting in this documentation using HTML + CSS + JS.</p>
+                        </div>
+            </div>
+            
+            <div class="container left">
+                        <div class="content">
+                        <h2>25th August</h2>
+                        <p>Putting all the parts together</p>
+                        </div>
+            </div>
+
+            <div class="container right">
+                <div class="content">
+                <h2>26th August</h2>
+                <p>Pushing ready files to remote repository.</p>
+                </div>
+            </div>
+
+            <div class="container left">
+                <div class="content">
+                <h2>27th August</h2>
+                <p>Creating project presentation.</p>
+                </div>
+            </div>
+            </div><br>
+
+
+        <h2>Technologies and Techniques</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp; In this section, you will find a review and simple information about the tools and techniques we used in writing the project's source code to reach this format.</p>
+
+            <ul>
+                <li>Tkinter</li>
+                <li>PyQt5</li>
+                <li>SQLlite3</li>
+                <li>GitHub</li>
+                <li>PEP-0008 Code Style</li>
+            </ul>
+
+            <b>Tkinter</b><br>
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp; is the only frameworks that’s built into the python standard library, has several strengths It’s cross-platform, so the same code works on Windows, macos, and Linux.
+                    Visual elements are rendered using native operating system elements, so applications built with tkinter look like they belong on the platform where they’re run.
+                    Although tkinter is considered the de-facto Python GUI framework, it’s not without criticism. One notable criticism is that GUIs built with tkinter look outdated. If you want a shiny, modern interface, then tkinter may not be what you’re looking for. so that we used <b>PyQt5.</b>
+                </p>
+
+            <b>PyQt5</b><br>
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp; is a GUI widgets toolkit. It is a Python interface for Qt, one of the most powerful, and popular cross-platform GUI library. PyQt was developed by RiverBank Computing Ltd. 
+                    PyQt API is a set of modules containing a large number of classes and functions. While QtCore module contains non-GUI functionality for working with file and directory etc., QtGui module contains all the graphical controls. In addition, there are modules for working with XML (QtXml), SVG (QtSvg), and SQL (QtSql).                    
+                </p>
+
+            <b>SQLlite3</b><br>
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp; is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine. SQLite is the most used database engine in the world. SQLite is built into all mobile phones and most computers and comes bundled inside countless other applications that people use every day. 
+                </p>
+
+
+            <b>GitHub</b><br>
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp; is a for-profit company that offers a cloud-based Git repository hosting service. Essentially, it makes it a lot easier for individuals and teams to use Git for version control and collaboration.
+                    GitHub’s interface is user-friendly enough so even novice coders can take advantage of Git. Without GitHub, using Git generally requires a bit more technical savvy and use of the command line.
+                </p><br>
+
+
+            <b>PEP-0008 Code Style Guidelines</b><br>
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;  is a document that provides guidelines and best practices on how to write Python code. It was written in 2001 by Guido van Rossum, Barry Warsaw, and Nick Coghlan. The primary focus of PEP 8 is to improve the readability and consistency of Python code.
+                    PEP stands for Python Enhancement Proposal, and there are several of them. A PEP is a document that describes new features proposed for Python and documents aspects of Python, like design and style, for the community.
+                </p><br><br>
+
+                
+
+
+
+        <h2>Games</h2>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp; In this section you will find the games that we support in this project and mentioned at the beginning of the document.</p><br>
+
+                <center>
+                    <img>
+                    <br>
+
+
+                    <img>
+                    <br>
+
+
+                    <img>
+                    <br>
+
+
+                    <img>
+                    <br>
+                </center><br>
+
+
+
+
+
+
+
+        <h2>GUI</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp; ------</p>
+
+
+            <center>
+                <img>
+                <br>
+
+
+                <img>
+                <br>
+
+
+                <img>
+                <br>
+
+
+                <img>
+                <br>
+            </center><br>
+
+
+
+
+
+
+        <h2>Code Snips</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp; ------</p>
+
+            <center>
+                <img>
+                <br>
+
+
+                <img>
+                <br>
+
+
+                <img>
+                <br>
+
+
+                <img>
+                <br>
+            </center><br>
+
+
+
+        <h2>Team Members and Roles</h2>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp; In this section you will find all about team members and there roles<br></p>
+
+                <button class="tablink" onclick="openPage('Hossam', this, 'red')">Hossam</button>
+                <button class="tablink" onclick="openPage('Engy', this, 'green')" id="defaultOpen">Engy</button>
+                <button class="tablink" onclick="openPage('Gehad', this, 'blue')">Gehad</button>
+                <button class="tablink" onclick="openPage('Asmma', this, 'yellow')">Asmma</button>
+                <button class="tablink" onclick="openPage('Taqwa', this, 'magenta')">Taqwa</button>
+                <button class="tablink" onclick="openPage('Sameh', this, 'orange')">Sameh</button>
+
+
+                <div id="Hossam" class="tabcontent">
+                    <div class="card">
+                        <img src="imgs/guido.jpg" alt="Hossam" style="width:100%">
+                        <h1>Hossam Hamdy</h1>
+                        <p class="title">CS Student</p>
+                        <p>Benha University</p>
+                        <a href="https://github.com/0xGhazy"><i class="fa fa-github"></i></a>
+                        <a href="https://twitter.com/0xGhazy"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/0xGhazy/"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://web.facebook.com/0xGhazy/"><i class="fa fa-facebook"></i></a>
+                        <p><button>Contact</button></p>
+                    </div>
+                    <br><br>
+                    <h2>Hossam Hamdy Roles:</h2>
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Refactored Alien Invasion Game.</h4>
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Implementing Edit_Alien_Invasion_Sitting frame in Tkinter.</h4>
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Assign tasks equally to team members to ensure everyone participated in writing the source code.</h4>
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Design main application GUI using PyQt5.</h4>
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Contribute in project Cores, creating Emailing functions</h4>
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Putting all project parts together, organizing the files and uploading them to the project own repository.</h4>
+                </div>
+    
+                <div id="Engy" class="tabcontent">
+                    <div class="card">
+                        <img src="imgs/guido.jpg" alt="Engy" style="width:100%">
+                        <h1>Engy Essam</h1>
+                        <p class="title">CS Student</p>
+                        <p>Benha University</p>
+                        <a href="https://github.com/engi2001"><i class="fa fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/engyesam"><i class="fa fa-linkedin"></i></a>
+                        <p><button>Contact</button></p>
+                    </div>
+                    <br><br>
+                    <h2>Engy Essam Roles:</h2>
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Refactored Tic Tac Toe Game.</h4>
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Implementing Edit_Tic_Tac_Toe_Sitting frame in Tkinter.</h4>
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Contribute in project Cores, Creating signin frame using Tkinter.</h4>
+                </div>
+
+                <div id="Gehad" class="tabcontent">
+                    <div class="card">
+                        <img src="imgs/guido.jpg" alt="Gehad" style="width:100%">
+                        <h1>Gehad Ahmed</h1>
+                        <p class="title">CS Student</p>
+                        <p>Benha University</p>
+                        <a href="https://www.linkedin.com/in/gehad-ahmed-13575621a"><i class="fa fa-linkedin"></i></a>
+                        <p><button>Contact</button></p>
+                    </div>
+                    <br><br>
+                    <h2>Gehad Ahmed Roles:</h2>
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Implementing Database in sqlite3.</h4>
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Contribute in project Cores, Creating Signup frame using Tkinter.</h4>
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Produce project presentation, ERD diagram and mindmap.</h4>
+                </div>
+
+                <div id="Asmma" class="tabcontent">
+                    <div class="card">
+                        <img src="imgs/guido.jpg" alt="Engy" style="width:100%">
+                        <h1>Asmaa Elnagar</h1>
+                        <p class="title">CS Student</p>
+                        <p>Benha University</p>
+                        <a href="https://www.linkedin.com/in/asmaa-elnagar-3266a721a/"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://github.com/asmaa-102"><i class="fa fa-github"></i></a>
+                        <p><button>Contact</button></p>
+                    </div>
+                    <br><br>
+                    <h2>Asmaa Elnagar Roles:</h2>
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Refactored Snake Game.</h4>
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Implementing Edit_Snake_Sitting frame in Tkinter.</h4>
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Contribute in main application UI design.</h4>
+                </div>
+
+                <div id="Taqwa" class="tabcontent">
+                    <div class="card">
+                        <img src="imgs/guido.jpg" alt="Engy" style="width:100%">
+                        <h1>Taqwa Mohamed</h1>
+                        <p class="title">CS Student</p>
+                        <p>Benha University</p>
+                        <a href="###"><i class="fa fa-github"></i></a>
+                        <a href="###"><i class="fa fa-linkedin"></i></a>
+                        <p><button>Contact</button></p>
+                    </div>
+                    <br><br>
+                    <h2>Taqwa Mohamed Roles:</h2>
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Produce project Documentation using HTML + CSS + JavaScript.</h4>
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Contribute in project Cores, feedback frame with Tkinter.</h4>
+                </div>
+
+                <div id="Sameh" class="tabcontent">
+                    <div class="card">
+                        <img src="imgs/guido.jpg" alt="Engy" style="width:100%">
+                        <h1>Sameh Elisha</h1>
+                        <p class="title">CS Student</p>
+                        <p>Benha University</p>
+                        <a href="https://github.com/0xSE"><i class="fa fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/0xSE/"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/nullxSE"><i class="fa fa-facebook"></i></a>
+                        <p><button>Contact</button></p>
+                    </div>
+                    <br><br>
+                    <h2>Sameh Elisha Roles:</h2>
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Refactored Flappy Birds Game.</h4>
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Implementing Edit_Flappy_Bird_Sitting frame in Tkinter.</h4>
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Contribute in project Cores, creating hashing function.</h4>
+                </div><br><br><br>
+
+
+
+        <h2>References</h2>
+            <b>Books:</b>
+            <ul>
+                <li><a href="https://www.amazon.com/Starting-Out-Python-Tony-Gaddis/dp/0134444329">Starting Out with Python - Tony Gaddis</a></li>
+                <li><a href="https://www.amazon.com/Automate-Boring-Stuff-Python-2nd-ebook-dp-B07VSXS4NK/dp/B07VSXS4NK/ref=mt_other?_encoding=UTF8&me=&qid=1629739482">Automate the Boring Stuff with Python</a></li>
+                <li><a href="https://www.amazon.com/Python-Kids-Playful-Introduction-Programming/dp/1593274076">Python for Kids: A Playful Introduction to Programming - Jason R. Briggs</a></li>
+                <li><a href="https://www.amazon.com/Python-GUI-Programming-Tkinter-applications-ebook/dp/B079HZPS7K/ref=sr_1_1?crid=2S2V23AX3P4AE&dchild=1&keywords=python+gui+programming&qid=1629739530&s=digital-text&sprefix=python+gui+%2Cdigital-text%2C265&sr=1-1">Python GUI Programming with Tkinter: Develop responsive and powerful GUI applications with Tkinter</a></li>
+            </ul>
+        <h4>Courses:</h4>
+        <ul>
+            <li><a href="https://www.udemy.com/course/the-complete-python-game-development-bootcamp-2021-python3/">The Complete Python Game Development Bootcamp 2021 |Python3</a></li>
+            <li><a href="https://www.udemy.com/course/100-days-of-code/?utm_source=adwords&utm_medium=udemyads&utm_campaign=Python_v.PROF_la.EN_cc.ROW_ti.7380&utm_content=deal4584&utm_term=_._ag_85724077624_._ad_535397245836_._kw__._de_c_._dm__._pl__._ti_dsa-774930046209_._li_1005390_._pd__._&matchtype=b&gclid=Cj0KCQjwjo2JBhCRARIsAFG667XX1_oIcW1KWL_A3rxKYPcnK10d3gpR2kdzS0Ddc2PykhDoSTR2aqEaAtMYEALw_wcB">100 Days of Code - Dr. Angela Yu</a></li>
+        </ul>
+        <b>Tutorials and Articles</b>
+        <ul>
+            <li><a href="https://nitratine.net/blog/post/how-to-import-a-pyqt5-ui-file-in-a-python-gui/">How to Import a PyQt5 .ui File in a Python GUI</a></li>
+            <li><a href="https://stackoverflow.com/questions/43028904/converting-ui-to-py-with-python-3-6-on-pyqt5">Converting .ui to .py with Python 3.6 on PyQt5.</a></li>
+            <li><a href="https://www.w3schools.com/howto/howto_css_profile_card.asp">How TO - Profile Card</a></li>
+            <li><a href="https://www.w3schools.com/howto/howto_js_full_page_tabs.asp">How TO - Full Page Tabs</a></li>
+        </ul>
+    </body>
+</html>
+
+<!--
+            ███╗   ███╗██╗███╗   ██╗██╗      ██████╗ ███████╗    ██████╗ ██████╗  ██████╗      ██╗███████╗ ██████╗████████╗
+            ████╗ ████║██║████╗  ██║██║      ██╔══██╗██╔════╝    ██╔══██╗██╔══██╗██╔═══██╗     ██║██╔════╝██╔════╝╚══██╔══╝
+            ██╔████╔██║██║██╔██╗ ██║██║█████╗██████╔╝███████╗    ██████╔╝██████╔╝██║   ██║     ██║█████╗  ██║        ██║   
+            ██║╚██╔╝██║██║██║╚██╗██║██║╚════╝██╔═══╝ ╚════██║    ██╔═══╝ ██╔══██╗██║   ██║██   ██║██╔══╝  ██║        ██║   
+            ██║ ╚═╝ ██║██║██║ ╚████║██║      ██║     ███████║    ██║     ██║  ██║╚██████╔╝╚█████╔╝███████╗╚██████╗   ██║   
+            ╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝      ╚═╝     ╚══════╝    ╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚════╝ ╚══════╝ ╚═════╝   ╚═╝   
+-->
