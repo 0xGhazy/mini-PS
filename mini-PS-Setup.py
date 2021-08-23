@@ -3,7 +3,7 @@ from time import sleep
 
 
 def install_req():
-    libs = ['pygame', '', '', '']
+    libs = ['pygame', 'PyQt5']
     for i in libs:
         print("[+] Installing {}".format(i))
         os.system('pip install {}'.format(i))
