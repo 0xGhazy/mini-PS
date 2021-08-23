@@ -1,0 +1,17 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>icons/about.png</file>
+    <file>icons/ai.png</file>
+    <file>icons/alien.png</file>
+    <file>icons/bird.jpg</file>
+    <file>icons/bird.png</file>
+    <file>icons/exit.png</file>
+    <file>icons/home.png</file>
+    <file>icons/joystic.png</file>
+    <file>icons/main.png</file>
+    <file>icons/snake.png</file>
+    <file>icons/snake_img.png</file>
+    <file>icons/xo.png</file>
+    <file>icons/XO_img.PNG</file>
+  </qresource>
+</RCC>
