@@ -29,7 +29,7 @@ class ApplicationUI(QtWidgets.QMainWindow):
         self.show()
         self.HandelButtons()
         
-    # ---snip---
+
     def HandelButtons(self):
         # Handling All buttons in the application.
         self.home_btn.clicked.connect(self.ch_to_home)
@@ -46,7 +46,6 @@ class ApplicationUI(QtWidgets.QMainWindow):
 
         # doc button
         self.doc_btn.clicked.connect(self.open_doc)
-    # ---snip---
 
 
     # ------------------------- #
