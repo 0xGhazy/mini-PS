@@ -18,6 +18,11 @@ SN_Game_handle = r"Games\Snake\SnakeGames.py"               # importing Snake ga
 # project documentation handler
 doc_handler = r"Documentation\Docs.html"
 
+# github handler
+github_handel = 'explorer "https://github.com/0xGhazy/mini-PS"'
+
+
+
 class ApplicationUI(QtWidgets.QMainWindow):
     """  """
 
@@ -31,7 +36,8 @@ class ApplicationUI(QtWidgets.QMainWindow):
         
 
     def HandelButtons(self):
-        # Handling All buttons in the application.
+        """[summary]"""
+        # Handling left (Navigation) buttons.
         self.home_btn.clicked.connect(self.ch_to_home)
         self.ai_btn.clicked.connect(self.ch_to_ai)
         self.fb_btn.clicked.connect(self.ch_to_fb)
@@ -46,6 +52,9 @@ class ApplicationUI(QtWidgets.QMainWindow):
 
         # doc button
         self.doc_btn.clicked.connect(self.open_doc)
+
+        # GitHub button
+        self.github_btn.clicked.connect(self.visit_github)
 
 
     # ------------------------- #
@@ -106,10 +115,28 @@ class ApplicationUI(QtWidgets.QMainWindow):
         CMD.stdout.read()
         CMD.stderr.read()
 
+    
+    # --------------------------- #
+    # Handling game start buttons #
+    # --------------------------- #
+
     def open_doc(self):
         CMD = subprocess.Popen(doc_handler, shell=True,stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         CMD.stdout.read()
         CMD.stderr.read()
+
+    def visit_github(self):
+        CMD = subprocess.Popen(github_handel, shell=True,stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        CMD.stdout.read()
+        CMD.stderr.read()
+    
+    def get_feedback(self):
+        pass
+
+
+
+
+
 
 
 if __name__ == '__main__':

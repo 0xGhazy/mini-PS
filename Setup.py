@@ -12,4 +12,10 @@ def install_req():
         os.system('cls')
 
 
-install_req()
+
+def create_profile(default_profile_content):
+    pass
+
+
+
+

@@ -160,7 +160,7 @@ QPushButton:active {
        <string>Project Documentation</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="doc_btn_2">
+     <widget class="QPushButton" name="feedback_btn">
       <property name="geometry">
        <rect>
         <x>740</x>
@@ -191,7 +191,7 @@ QPushButton:active {
        <string>Send Feedback</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="doc_btn_3">
+     <widget class="QPushButton" name="github_btn">
       <property name="geometry">
        <rect>
         <x>440</x>
@@ -261,23 +261,6 @@ font: 75 12pt &quot;Arial&quot;;</string>
        <string>You can control your spaceship with the left and right arrows</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_83">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>660</y>
-        <width>321</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);
-font: 75 15pt &quot;Arial&quot;;</string>
-      </property>
-      <property name="text">
-       <string>Code refactored by: Hossam Hamdy</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_82">
       <property name="geometry">
        <rect>
@@ -301,7 +284,7 @@ font: 75 15pt &quot;Arial&quot;;</string>
       <property name="geometry">
        <rect>
         <x>920</x>
-        <y>660</y>
+        <y>590</y>
         <width>191</width>
         <height>51</height>
        </rect>
@@ -380,6 +363,37 @@ font: 75 12pt &quot;Arial&quot;;</string>
        <string>As a guardian of the galaxy, you have to  destroy all the spaceships.</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="ai_sittings">
+      <property name="geometry">
+       <rect>
+        <x>920</x>
+        <y>650</y>
+        <width>191</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color: white;
+font: 87 15pt &quot;Arial Black&quot;;
+	background-color: rgb(35, 134, 54);
+	border-radius:7px;
+	border:1px solid #18ab29;
+}
+
+QPushButton:hover {
+	background:linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
+	background-color:#18ab29;
+}
+QPushButton:active {
+	position:relative;
+	top:2px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Sittings</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
@@ -406,7 +420,7 @@ font: 75 12pt &quot;Arial&quot;;</string>
       <property name="geometry">
        <rect>
         <x>920</x>
-        <y>660</y>
+        <y>590</y>
         <width>191</width>
         <height>51</height>
        </rect>
@@ -431,23 +445,6 @@ QPushButton:active {
       </property>
       <property name="text">
        <string>Play</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_87">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>660</y>
-        <width>321</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);
-font: 75 15pt &quot;Arial&quot;;</string>
-      </property>
-      <property name="text">
-       <string>Code refactored by: Sameh Elishaa</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_50">
@@ -521,6 +518,37 @@ font: 75 25pt &quot;Arial&quot;;</string>
        <string>[~] Flappy Bird Game</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="fb_sittings">
+      <property name="geometry">
+       <rect>
+        <x>920</x>
+        <y>650</y>
+        <width>191</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color: white;
+font: 87 15pt &quot;Arial Black&quot;;
+	background-color: rgb(35, 134, 54);
+	border-radius:7px;
+	border:1px solid #18ab29;
+}
+
+QPushButton:hover {
+	background:linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
+	background-color:#18ab29;
+}
+QPushButton:active {
+	position:relative;
+	top:2px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Sittings</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_4">
      <attribute name="title">
@@ -565,7 +593,7 @@ font: 75 12pt &quot;Arial&quot;;</string>
       <property name="geometry">
        <rect>
         <x>920</x>
-        <y>660</y>
+        <y>590</y>
         <width>191</width>
         <height>51</height>
        </rect>
@@ -628,23 +656,6 @@ font: 75 15pt &quot;Arial&quot;;</string>
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QLabel" name="label_38">
-      <property name="geometry">
-       <rect>
-        <x>140</x>
-        <y>660</y>
-        <width>321</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);
-font: 75 15pt &quot;Arial&quot;;</string>
-      </property>
-      <property name="text">
-       <string>Code refactored by: Asmaa Elnagar</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_54">
       <property name="geometry">
        <rect>
@@ -660,6 +671,37 @@ font: 75 12pt &quot;Arial&quot;;</string>
       </property>
       <property name="text">
        <string>This game is played by using the four directional buttons,</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="sn_sittings">
+      <property name="geometry">
+       <rect>
+        <x>920</x>
+        <y>650</y>
+        <width>191</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color: white;
+font: 87 15pt &quot;Arial Black&quot;;
+	background-color: rgb(35, 134, 54);
+	border-radius:7px;
+	border:1px solid #18ab29;
+}
+
+QPushButton:hover {
+	background:linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
+	background-color:#18ab29;
+}
+QPushButton:active {
+	position:relative;
+	top:2px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Sittings</string>
       </property>
      </widget>
     </widget>
@@ -702,23 +744,6 @@ font: 75 25pt &quot;Arial&quot;;</string>
        <string>[~] Tic Tac Toe Game</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_41">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>660</y>
-        <width>301</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);
-font: 75 15pt &quot;Arial&quot;;</string>
-      </property>
-      <property name="text">
-       <string>Code refactored by: Engy Essam</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_42">
       <property name="geometry">
        <rect>
@@ -756,7 +781,7 @@ font: 75 12pt &quot;Arial&quot;;</string>
       <property name="geometry">
        <rect>
         <x>920</x>
-        <y>660</y>
+        <y>590</y>
         <width>191</width>
         <height>51</height>
        </rect>
@@ -798,6 +823,37 @@ font: 75 15pt &quot;Arial&quot;;</string>
       </property>
       <property name="text">
        <string>How to play?</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="xo_sittings">
+      <property name="geometry">
+       <rect>
+        <x>920</x>
+        <y>650</y>
+        <width>191</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color: white;
+font: 87 15pt &quot;Arial Black&quot;;
+	background-color: rgb(35, 134, 54);
+	border-radius:7px;
+	border:1px solid #18ab29;
+}
+
+QPushButton:hover {
+	background:linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
+	background-color:#18ab29;
+}
+QPushButton:active {
+	position:relative;
+	top:2px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Sittings</string>
       </property>
      </widget>
     </widget>
