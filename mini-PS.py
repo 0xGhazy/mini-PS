@@ -1,26 +1,29 @@
-
 import os
 import sys
 import subprocess
+os.chdir(os.path.dirname(__file__))
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5 import QtWidgets, uic
+from Cores.functions import run, read_json
 
-# change wd to cwd to run from cmd/vscode/python interpreter.
-os.chdir(os.path.dirname(__file__))
+# Reading pathes from profile.json file.
+pathes = read_json(r"Cores\profile.json")
+ALIEN_INVASION_PATH = pathes["ALIEN_INVASION_PATH"]
+ALIEN_INVASION_EDIT = pathes["ALIEN_INVASION_EDIT"]
+FLAPPY_BIRD_PATH = pathes["FLAPPY_BIRD_PATH"]
+FLAPPY_BIRD_EDIT = pathes["FLAPPY_BIRD_EDIT"]
+SNAKE_PATH = pathes["SNAKE_PATH"]
+SNAKE_EDIT = pathes["SNAKE_EDIT"]
+TIC_TAC_TOE_PATH = pathes["TIC_TAC_TOE_PATH"]
+TIC_TAC_TOE_EDIT = pathes["TIC_TAC_TOE_EDIT"]
+DOCUMENTATION_PATH = pathes["DOCUMENTATION_PATH"]
+VISIT_REPOSITORY = 'explorer "https://github.com/0xGhazy/mini-PS"'
+FEEDBACK = pathes["FEEDBACK"]
 
-# import games.
-AI_Game_handle = r"Games\Alien_Invasion\alien_invasion.py"  # Handling Alien Invasion game.
-FB_Game_handle = r"Games\Flappy_Bird\fb_game.py"            # Handling Flappy bird game.
-XO_Game_handle = r"Games\TicTacToe\XO.py"                   # importing XO game.
-SN_Game_handle = r"Games\Snake\SnakeGames.py"               # importing Snake game.
-
-# project documentation handler
-doc_handler = r"Documentation\Docs.html"
-
-# github handler
-github_handel = 'explorer "https://github.com/0xGhazy/mini-PS"'
-
+signin_path = r"Cores\signin_frame.py"
+XO_Game_handle = r"Cores\edit_xo.py"
+SN_Game_handle = r"Cores\edit_sn.py"
 
 
 class ApplicationUI(QtWidgets.QMainWindow):
@@ -37,106 +40,86 @@ class ApplicationUI(QtWidgets.QMainWindow):
 
     def HandelButtons(self):
         """[summary]"""
-        # Handling left (Navigation) buttons.
+        # (Navigation) events
         self.home_btn.clicked.connect(self.ch_to_home)
         self.ai_btn.clicked.connect(self.ch_to_ai)
         self.fb_btn.clicked.connect(self.ch_to_fb)
         self.sn_btn.clicked.connect(self.ch_to_sn)
         self.xo_btn.clicked.connect(self.ch_to_xo)
 
-        # handling start buttons
         self.play_ai.clicked.connect(self.start_ai)
         self.play_fb.clicked.connect(self.start_fb)
         self.play_sn.clicked.connect(self.start_sn)
         self.play_xo.clicked.connect(self.start_xo)
 
-        # doc button
+        self.sn_sittings.clicked.connect(self.sn_sittings_fn)
+        self.xo_sittings.clicked.connect(self.xo_sittings_fn)
+        self.ai_sittings.clicked.connect(self.ai_sittings_fn)
+        self.fb_sittings.clicked.connect(self.fb_sittings_fn)
+
         self.doc_btn.clicked.connect(self.open_doc)
-
-        # GitHub button
         self.github_btn.clicked.connect(self.visit_github)
+        self.feedback_btn.clicked.connect(self.get_feedback)
+        
 
 
-    # ------------------------- #
     # Handling navigaionbuttons #
-    # ------------------------- #
-
-    # handling home_btn actions
     def ch_to_home(self):
         """ Changing tab page to home page """
         self.tabWidgets = self.findChild(QtWidgets.QTabWidget, 'tabWidget')
         self.tabWidgets.setCurrentIndex(0)
-
-    # handling ai_btn acction
     def ch_to_ai(self):
         """  Changing tab page to Alien invasion game."""
         self.tabWidgets = self.findChild(QtWidgets.QTabWidget, 'tabWidget')
         self.tabWidgets.setCurrentIndex(1)
-
-    # handling fb_btn action
     def ch_to_fb(self):
         """ Changing tab page to flappy bird page. """
         self.tabWidgets = self.findChild(QtWidgets.QTabWidget, 'tabWidget')
         self.tabWidgets.setCurrentIndex(2)
-
-    # handling sn_btn action
     def ch_to_sn(self):
         """ Changing tab page to snake game. """
         self.tabWidgets = self.findChild(QtWidgets.QTabWidget, 'tabWidget')
         self.tabWidgets.setCurrentIndex(3)
-    
-    # handling xo_btn
     def ch_to_xo(self):
         """ Changing tab page to xo game. """
         self.tabWidgets = self.findChild(QtWidgets.QTabWidget, 'tabWidget')
         self.tabWidgets.setCurrentIndex(4)
 
-    # --------------------------- #
+
     # Handling game start buttons #
-    # --------------------------- #
-
     def start_ai(self):
-        CMD = subprocess.Popen(AI_Game_handle, shell=True,stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        CMD.stdout.read()
-        CMD.stderr.read()
-
+        run(ALIEN_INVASION_PATH)
     def start_fb(self):
-        CMD = subprocess.Popen(FB_Game_handle, shell=True,stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        CMD.stdout.read()
-        CMD.stderr.read()
-
+        run(FLAPPY_BIRD_PATH)
     def start_sn(self):
+        run(SNAKE_PATH)
+    def start_xo(self):
+        run(TIC_TAC_TOE_PATH)
+
+
+    # Handling Sittings buttons #
+    def ai_sittings_fn(self):
+        run(ALIEN_INVASION_EDIT)
+    def fb_sittings_fn(self):
+        run(FLAPPY_BIRD_EDIT)
+    def sn_sittings_fn(self):
+        # os.system(SN_Game_handle)
         CMD = subprocess.Popen(SN_Game_handle, shell=True,stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         CMD.stdout.read()
         CMD.stderr.read()
-
-    def start_xo(self):
+    def xo_sittings_fn(self):
         CMD = subprocess.Popen(XO_Game_handle, shell=True,stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         CMD.stdout.read()
         CMD.stderr.read()
 
-    
-    # --------------------------- #
-    # Handling game start buttons #
-    # --------------------------- #
-
+    # Handling home tabe buttons #
     def open_doc(self):
-        CMD = subprocess.Popen(doc_handler, shell=True,stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        CMD.stdout.read()
-        CMD.stderr.read()
-
+        run(DOCUMENTATION_PATH)
     def visit_github(self):
-        CMD = subprocess.Popen(github_handel, shell=True,stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        CMD.stdout.read()
-        CMD.stderr.read()
-    
+        run(VISIT_REPOSITORY)
     def get_feedback(self):
-        pass
-
-
-
-
-
+        run(signin_path)
+        run(FEEDBACK)
 
 
 if __name__ == '__main__':

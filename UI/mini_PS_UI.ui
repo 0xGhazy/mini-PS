@@ -63,7 +63,7 @@ border-color: rgb(16, 20, 20);
       <property name="geometry">
        <rect>
         <x>210</x>
-        <y>200</y>
+        <y>180</y>
         <width>401</width>
         <height>241</height>
        </rect>
@@ -82,7 +82,7 @@ border-color: rgb(16, 20, 20);
       <property name="geometry">
        <rect>
         <x>100</x>
-        <y>460</y>
+        <y>440</y>
         <width>491</width>
         <height>31</height>
        </rect>
@@ -99,7 +99,7 @@ font: 75 20pt &quot;Arial&quot;;</string>
       <property name="geometry">
        <rect>
         <x>600</x>
-        <y>460</y>
+        <y>440</y>
         <width>491</width>
         <height>31</height>
        </rect>
@@ -116,7 +116,7 @@ font: 75 20pt &quot;Arial&quot;;</string>
       <property name="geometry">
        <rect>
         <x>610</x>
-        <y>280</y>
+        <y>260</y>
         <width>341</width>
         <height>81</height>
        </rect>
@@ -132,8 +132,8 @@ font: 75 72pt &quot;Arial&quot;;</string>
      <widget class="QPushButton" name="doc_btn">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>530</y>
+        <x>130</x>
+        <y>500</y>
         <width>271</width>
         <height>51</height>
        </rect>
@@ -163,8 +163,8 @@ QPushButton:active {
      <widget class="QPushButton" name="feedback_btn">
       <property name="geometry">
        <rect>
-        <x>740</x>
-        <y>530</y>
+        <x>750</x>
+        <y>500</y>
         <width>271</width>
         <height>51</height>
        </rect>
@@ -195,7 +195,7 @@ QPushButton:active {
       <property name="geometry">
        <rect>
         <x>440</x>
-        <y>530</y>
+        <y>500</y>
         <width>271</width>
         <height>51</height>
        </rect>
@@ -420,7 +420,7 @@ font: 75 12pt &quot;Arial&quot;;</string>
       <property name="geometry">
        <rect>
         <x>920</x>
-        <y>590</y>
+        <y>530</y>
         <width>191</width>
         <height>51</height>
        </rect>
@@ -547,6 +547,37 @@ QPushButton:active {
       </property>
       <property name="text">
        <string>Sittings</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="play_fb_ai">
+      <property name="geometry">
+       <rect>
+        <x>920</x>
+        <y>590</y>
+        <width>191</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color: white;
+font: 87 15pt &quot;Arial Black&quot;;
+	background-color: rgb(35, 134, 54);
+	border-radius:7px;
+	border:1px solid #18ab29;
+}
+
+QPushButton:hover {
+	background:linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
+	background-color:#18ab29;
+}
+QPushButton:active {
+	position:relative;
+	top:2px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Play With Cam</string>
       </property>
      </widget>
     </widget>

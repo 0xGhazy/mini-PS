@@ -1,32 +1,81 @@
 from tkinter import *
-import tkinter as tk
-from tkinter import ttk, messagebox
+from tkinter import messagebox
 import sqlite3
+import os
+from functions import read_json, calc_hash
 
+
+os.chdir(os.path.dirname(__file__))
+pathes = read_json(r"profile.json")
+DATABASE_PATH = pathes["DATABASE_PATH"]
+feedback_path = 000000000
 
 def close():
-	win.destroy()	
+	exit()
 
+def clear():
+	messagebox.showinfo(title='delete', message='Do you want to clear?')
+	username_text.delete(0, END)
+	password_text.delete(0, END)
 
 def login():
-	if user_name.get()=="" or password.get()=="":
-		messagebox.showerror("Error","Enter User Name And Password",parent=win)	
+	username_text.get()
+	password_text.get()
+	if username_text.get() == "" or password_text.get() == "":
+		messagebox.showerror("[-] Error" , "All Fields Are Required" , parent = signin_window)	
 	else:
 		try:
             # connect to database.
-			con = pymysql.connect(host="localhost",user="root",password="",database="docterapp")
-			cur = con.cursor()
+			con = sqlite3.connect(DATABASE_PATH)
+			c = con.cursor()
+			for row in c.execute("Select * from users_info"):
+				uname = row[2]
+				upass = row[4]
+				if username_text.get() == uname and calc_hash(password_text.get(), "sha256") == upass:
+					messagebox.showinfo("[+] Login" , "You have Logged in successfully." , parent = signin_window)
+					exit()
+					# calling mainapplication
+				else:
+					pass
+			messagebox.showerror("[-] Not found" , "The username or password is incorrect" , parent = signin_window)
 
-			cur.execute("select * from user_information where username=%s and password = %s",(user_name.get(),password.get()))
-			row = cur.fetchone()
+		except Exception as error:
+			messagebox.showerror('[-] Error', str(error))
 
-			if row==None:
-				messagebox.showerror("Error" , "Invalid User Name And Password", parent = win)
 
-			else:
-				messagebox.showinfo("Success" , "Successfully Login" , parent = win)
-				close()
-				deshboard()
-			con.close()
-		except Exception as es:
-			messagebox.showerror("Error" , f"Error Dui to : {str(es)}", parent = win)
+# taking object from tkinter
+signin_window = Tk()
+# set frame title
+signin_window.title("mini-PS: Sign in")
+# set geometry.
+signin_window.maxsize(width=500 ,  height=250)
+signin_window.minsize(width=500 ,  height=250)
+
+# Set Title 'label'
+heading = Label(signin_window , text = "mini-PS Signin" , font = 'Verdana 20 bold')
+heading.place(x=140 , y=10)
+
+# frame vars
+username = StringVar()
+password = StringVar()
+
+username_lbl = Label(signin_window, text = "Username: " , font = 'Verdana 10 bold')
+username_lbl.place(x=80,y=90)
+username_text = Entry(signin_window, width = 40 , textvariable = username)
+username_text.place(x=200 , y=95)
+
+password_lbl = Label(signin_window, text = "Password: " , font = 'Verdana 10 bold')
+password_lbl.place(x=80,y=130)
+password_text = Entry(signin_window, width = 40 , show="*s", textvariable = password)
+password_text.place(x=200 , y=130)
+
+# handling buttons
+btn_signup = Button(signin_window, text = "Login", font = 'Verdana 10 bold', command = login)
+btn_signup.place(x=200, y=180)
+btn_clear = Button(signin_window, text = "Clear", font = 'Verdana 10 bold', command = clear)
+btn_clear.place(x=280, y=180)
+close_btn = Button(signin_window, text = "Close", font = 'Verdana 10 bold', command = close)
+close_btn.place(x=350, y=180)
+
+
+signin_window.mainloop()

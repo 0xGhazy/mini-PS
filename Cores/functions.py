@@ -1,0 +1,63 @@
+import os
+import json
+import smtplib
+import hashlib
+import getpass
+import datetime
+import subprocess
+#from Profile import DOCUMENTATION_PATH, LOGGING_PATH
+
+# handling project email from feedbacks
+PROJECT_EMAIL = "minips941@gmail.com"
+PROJECT_PASSWORD = "123456789pythonproject"
+
+def calc_hash(plain_text, hash_type = "sha256"):
+	hashed_text = hashlib.new(hash_type)
+	hashed_text.update(plain_text.encode())
+	hashing_result = hashed_text.hexdigest()
+	return hashing_result
+
+
+def create_json(file_name, data_dictionary):
+    os.chdir(os.path.dirname(__file__))
+    with open(file_name, 'w') as f:
+        json.dump(data_dictionary, f)
+
+def read_json(file_path):
+    with open(file_path, 'r+') as f:
+        content = json.load(f)
+    return content
+
+
+def send_feedback(username, contact_mail, feedback):
+    # TODO: Need to accept attachments and fancy emails
+    """ Function to send users feed back to the auther mail or org mail using stmp.gmail server with secure access
+    it doesn't accept 2FA accounts, for connection problems check this: https://www.google.com/settings/security/lesssecureapps """
+
+    message_content = f"""
+    Hello it's a feedback from {username}:{contact_mail}\n
+    feedback-Content:\n
+    {feedback}\n
+    By: mini-PS mailing system :)\n"""
+
+    smtp_server = "smtp.gmail.com"
+    port = 587  # For starttls
+    try:
+        # login to stmp server
+        smtpserver = smtplib.SMTP(smtp_server, port)
+        smtpserver.ehlo()
+        smtpserver.starttls()
+        smtpserver.ehlo()
+        smtpserver.login(PROJECT_EMAIL, PROJECT_PASSWORD)
+        # sender, recv, msg
+        smtpserver.sendmail(PROJECT_EMAIL, "m3t4n0y3t@gmail.com", message_content) 
+    except Exception as error:
+        print(error)
+    finally:
+        smtpserver.quit() 
+
+
+def run(command):
+    CMD = subprocess.Popen(command, shell=True,stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    CMD.stdout.read()
+    CMD.stderr.read()

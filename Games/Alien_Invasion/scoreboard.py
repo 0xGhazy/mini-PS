@@ -27,9 +27,7 @@ class Scoreboard:
         """Turn the score into a rendered image."""
         rounded_score = int(round(self.stats.score, -1))
         score_str = "{:,}".format(rounded_score)
-        self.score_image = self.font.render(
-            score_str, True, self.text_color, self.ai_settings.bg_color
-        )
+        self.score_image = self.font.render(score_str, True, self.text_color, self.ai_settings.bg_color)
 
         # Display the score at the top right of the screen.
         self.score_rect = self.score_image.get_rect()
@@ -63,7 +61,7 @@ class Scoreboard:
     def prep_ships(self):
         """Show how many ships are left."""
         self.ships = Group()
-        for ship_number in range(self.stats.ships_left):
+        for ship_number in range(int(self.stats.ships_left)):
             ship = Ship(self.ai_settings, self.screen)
             ship.rect.x = 10 + ship_number * ship.rect.width
             ship.rect.y = 10

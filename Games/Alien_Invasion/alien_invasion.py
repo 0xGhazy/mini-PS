@@ -16,7 +16,7 @@ def _Run_AI_():
     os.chdir(os.path.dirname(__file__))
     pygame.init()
     ai_settings = Settings()
-    screen = pygame.display.set_mode((ai_settings.screen_width, ai_settings.screen_height))
+    screen = pygame.display.set_mode((int(ai_settings.screen_width), int(ai_settings.screen_height)))
     pygame.display.set_caption("mini-PS: Alien Invasion")
 
     # Make the Play button.
