@@ -15,7 +15,7 @@ Welcome to mini-PS Project, Our project contain 4 open source games <b>(Alien in
 
 # Download and Setup
 #### Cloning the repo.
-    git clone https://github.com/0xGhazy/mini-PS
+    git clone https://github.com/0xGhazy/mini-PS.git
 
 #### Running `Setup.py` file 
 For windows users use:
