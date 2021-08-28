@@ -1,7 +1,5 @@
 import os
-from time import sleep
 from Cores.functions import create_json
-
 
 MAIN_APPLICATION_PATH =  os.path.dirname(__file__)
 # Don't touch it's art :) Hahahaha, no i'm joking any change here will affect the whole application.
@@ -26,21 +24,18 @@ default_profile_content = {
     "FEEDBACK" : r"{0}\Cores\feedback.py".format(MAIN_APPLICATION_PATH)
 }
 
-
 def install_req():
     libs = ['pygame', 'PyQt5']
     for i in libs:
         print("[+] Installing {}".format(i))
         os.system('pip install {}'.format(i))
-        print("""\n\n===================={} Has installed successfully <3====================\n\n""".format(i))
-        sleep(3)
+        print("""\n\n====================  {} Has installed successfully <3  ====================\n\n""".format(i))
         os.system('cls')
 
 def create_profile(default_profile_content):
     CD = os.path.dirname(__file__)
-    path = r"{0}\Cores\profile.py".format(CD)
-    with open(path, "w+") as f:
-        f.write(default_profile_content)
+    path = r"{0}\Cores\profile.json".format(CD)
+    create_json(path, default_profile_content)
 
 def signup_call():
     path = MAIN_APPLICATION_PATH + "\Cores\signup_frame.py"
@@ -48,6 +43,6 @@ def signup_call():
 
 
 if __name__ == '__main__':
-    #install_req()
-    create_profile(str(default_profile_content))
+    install_req()
+    create_profile(default_profile_content)
     signup_call()

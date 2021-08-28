@@ -420,7 +420,7 @@ font: 75 12pt &quot;Arial&quot;;</string>
       <property name="geometry">
        <rect>
         <x>920</x>
-        <y>530</y>
+        <y>590</y>
         <width>191</width>
         <height>51</height>
        </rect>
@@ -547,37 +547,6 @@ QPushButton:active {
       </property>
       <property name="text">
        <string>Sittings</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="play_fb_ai">
-      <property name="geometry">
-       <rect>
-        <x>920</x>
-        <y>590</y>
-        <width>191</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	color: white;
-font: 87 15pt &quot;Arial Black&quot;;
-	background-color: rgb(35, 134, 54);
-	border-radius:7px;
-	border:1px solid #18ab29;
-}
-
-QPushButton:hover {
-	background:linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
-	background-color:#18ab29;
-}
-QPushButton:active {
-	position:relative;
-	top:2px;
-}</string>
-      </property>
-      <property name="text">
-       <string>Play With Cam</string>
       </property>
      </widget>
     </widget>

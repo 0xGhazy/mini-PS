@@ -113,5 +113,5 @@ btn_update.place(x=200, y=330)
 close_btn = Button(ai_edit_window, text = "Close", font = 'Verdana 10 bold', command = close)
 close_btn.place(x=290, y=330)
 
-if __name__ == '__main__':
-    mainloop()
+
+mainloop()

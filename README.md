@@ -44,3 +44,9 @@ you can access project documentation from `Docs.html` file in `Documentation` di
 # Links:
 - [Snake Game](https://youtu.be/PHdZdrMCKuY)
 - [Tic Tac Toe Game](https://www.codespeedy.com/tic-tac-toe-gui-in-python-using-tkinter/)
+
+
+#ToDo:
+- [ ] Handling Exceptions.
+- [ ] Adding Passwords standards.
+- [ ] efeffefef

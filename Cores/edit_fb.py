@@ -46,5 +46,5 @@ btn_update.place(x=200, y=150)
 close_btn = Button(fb_edit_window, text = "Close", font = 'Verdana 10 bold', command = close)
 close_btn.place(x=290, y=150)
 
-if __name__ == '__main__':
-    mainloop()
+
+mainloop()

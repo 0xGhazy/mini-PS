@@ -20,26 +20,27 @@ TIC_TAC_TOE_EDIT = pathes["TIC_TAC_TOE_EDIT"]
 DOCUMENTATION_PATH = pathes["DOCUMENTATION_PATH"]
 VISIT_REPOSITORY = 'explorer "https://github.com/0xGhazy/mini-PS"'
 FEEDBACK = pathes["FEEDBACK"]
-
 signin_path = r"Cores\signin_frame.py"
 XO_Game_handle = r"Cores\edit_xo.py"
 SN_Game_handle = r"Cores\edit_sn.py"
 
 
 class ApplicationUI(QtWidgets.QMainWindow):
-    """  """
+
 
     def __init__(self):
         super(ApplicationUI, self).__init__()
+        # loading .ui design file
         uic.loadUi('UI\mini_PS_UI.ui', self)
+        # hidding tab widgets bar
         self.tabWidgets = self.findChild(QtWidgets.QTabWidget, 'tabWidget')
         self.tabWidgets.tabBar().setVisible(False)
+        # display the window
         self.show()
         self.HandelButtons()
-        
+
 
     def HandelButtons(self):
-        """[summary]"""
         # (Navigation) events
         self.home_btn.clicked.connect(self.ch_to_home)
         self.ai_btn.clicked.connect(self.ch_to_ai)
@@ -85,7 +86,6 @@ class ApplicationUI(QtWidgets.QMainWindow):
         self.tabWidgets = self.findChild(QtWidgets.QTabWidget, 'tabWidget')
         self.tabWidgets.setCurrentIndex(4)
 
-
     # Handling game start buttons #
     def start_ai(self):
         run(ALIEN_INVASION_PATH)
@@ -96,21 +96,16 @@ class ApplicationUI(QtWidgets.QMainWindow):
     def start_xo(self):
         run(TIC_TAC_TOE_PATH)
 
-
     # Handling Sittings buttons #
     def ai_sittings_fn(self):
         run(ALIEN_INVASION_EDIT)
     def fb_sittings_fn(self):
         run(FLAPPY_BIRD_EDIT)
     def sn_sittings_fn(self):
-        # os.system(SN_Game_handle)
-        CMD = subprocess.Popen(SN_Game_handle, shell=True,stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        CMD.stdout.read()
-        CMD.stderr.read()
+        run(SN_Game_handle)
     def xo_sittings_fn(self):
-        CMD = subprocess.Popen(XO_Game_handle, shell=True,stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        CMD.stdout.read()
-        CMD.stderr.read()
+        run(XO_Game_handle)
+
 
     # Handling home tabe buttons #
     def open_doc(self):

@@ -59,11 +59,11 @@ def update():
             close()
 
 sn_edit_window = Tk()
-sn_edit_window.title("mini-PS: Sign in")
+sn_edit_window.title("mini-PS: Snake Sittings")
 sn_edit_window.maxsize(width=500 ,  height=40)
 sn_edit_window.minsize(width=500 ,  height=400)
-heading = Label(sn_edit_window , text = "Alien Invasion Edit Sittings" , font = 'Verdana 15 bold')
-heading.place(x=90 , y=10)
+heading = Label(sn_edit_window , text = "Snake Sittings" , font = 'Verdana 15 bold')
+heading.place(x=165 , y=10)
 
 cbg_color_lbl = Label(sn_edit_window, text = "BG Color: " , font = 'Verdana 10 bold')
 cbg_color_lbl.place(x=80,y=90)
