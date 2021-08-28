@@ -5,7 +5,8 @@ os.chdir(os.path.dirname(__file__))
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5 import QtWidgets, uic
-from Cores.functions import run, read_json
+from Cores.functions import run, read_json, backup
+
 
 # Reading pathes from profile.json file.
 pathes = read_json(r"Cores\profile.json")
@@ -20,6 +21,7 @@ TIC_TAC_TOE_EDIT = pathes["TIC_TAC_TOE_EDIT"]
 DOCUMENTATION_PATH = pathes["DOCUMENTATION_PATH"]
 VISIT_REPOSITORY = 'explorer "https://github.com/0xGhazy/mini-PS"'
 FEEDBACK = pathes["FEEDBACK"]
+SIGNIN_PATH = pathes["SIGNIN_FRAME_PATH"]
 signin_path = r"Cores\signin_frame.py"
 XO_Game_handle = r"Cores\edit_xo.py"
 SN_Game_handle = r"Cores\edit_sn.py"
@@ -61,6 +63,7 @@ class ApplicationUI(QtWidgets.QMainWindow):
         self.doc_btn.clicked.connect(self.open_doc)
         self.github_btn.clicked.connect(self.visit_github)
         self.feedback_btn.clicked.connect(self.get_feedback)
+        self.take_backup.clicked.connect(self.get_backup)
         
 
 
@@ -115,6 +118,8 @@ class ApplicationUI(QtWidgets.QMainWindow):
     def get_feedback(self):
         run(signin_path)
         run(FEEDBACK)
+    def get_backup(self):
+        run(SIGNIN_PATH)
 
 
 if __name__ == '__main__':

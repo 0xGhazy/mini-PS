@@ -37,7 +37,7 @@ you can access project documentation from `Docs.html` file in `Documentation` di
 - Hossam Hamdy
 - Sameh Elisha
 - Engy Essam
-- Asmaa Elnagar
+- Asmaa Elnggar
 - Taqwa Mohamed
 - Gehad Ahmed
 
@@ -49,4 +49,3 @@ you can access project documentation from `Docs.html` file in `Documentation` di
 #ToDo:
 - [ ] Handling Exceptions.
 - [ ] Adding Passwords standards.
-- [ ] efeffefef

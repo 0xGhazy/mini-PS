@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 import sqlite3
 import os
-from functions import read_json, calc_hash
+from functions import read_json, calc_hash, backup
 
 
 os.chdir(os.path.dirname(__file__))
@@ -33,8 +33,9 @@ def login():
 				upass = row[4]
 				if username_text.get() == uname and calc_hash(password_text.get(), "sha256") == upass:
 					messagebox.showinfo("[+] Login" , "You have Logged in successfully." , parent = signin_window)
+					backup()
+					messagebox.showinfo("[+] Done" , "Backup has created successfully." , parent = signin_window)
 					exit()
-					# calling mainapplication
 				else:
 					pass
 			messagebox.showerror("[-] Not found" , "The username or password is incorrect" , parent = signin_window)
@@ -78,4 +79,4 @@ close_btn = Button(signin_window, text = "Close", font = 'Verdana 10 bold', comm
 close_btn.place(x=350, y=180)
 
 
-signin_window.mainloop()
+mainloop()

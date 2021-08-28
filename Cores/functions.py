@@ -3,7 +3,7 @@ import json
 import smtplib
 import hashlib
 import getpass
-import datetime
+from datetime import datetime
 import subprocess
 #from Profile import DOCUMENTATION_PATH, LOGGING_PATH
 
@@ -61,3 +61,18 @@ def run(command):
     CMD = subprocess.Popen(command, shell=True,stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     CMD.stdout.read()
     CMD.stderr.read()
+
+
+def backup():
+    os.chdir(os.path.dirname(__file__))
+    json_pathes = read_json(f"profile.json")
+    ALIEN_INVASION_CONF = json_pathes["ALIEN_INVASION_CONF"]
+    FLAPPY_BIRD_CONF = json_pathes["FLAPPY_BIRD_CONF"]
+    SNAKE_CONF = json_pathes["SNAKE_CONF"]
+    TIC_TAC_TOE_CONF = json_pathes["TIC_TAC_TOE_CONF"]
+    Desktop_path = r"C:\Users\{0}\Desktop".format(getpass.getuser())
+    l = [ALIEN_INVASION_CONF, FLAPPY_BIRD_CONF, SNAKE_CONF, TIC_TAC_TOE_CONF]
+    for i in l:
+        data = read_json(i)
+        with open(f"{Desktop_path}\Backup.txt", "a+") as back:
+            back.write(f"""\n\n{data}\n\n""")

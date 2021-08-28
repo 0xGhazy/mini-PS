@@ -62,7 +62,7 @@ border-color: rgb(16, 20, 20);
      <widget class="QLabel" name="label">
       <property name="geometry">
        <rect>
-        <x>210</x>
+        <x>220</x>
         <y>180</y>
         <width>401</width>
         <height>241</height>
@@ -81,7 +81,7 @@ border-color: rgb(16, 20, 20);
      <widget class="QLabel" name="label_10">
       <property name="geometry">
        <rect>
-        <x>100</x>
+        <x>110</x>
         <y>440</y>
         <width>491</width>
         <height>31</height>
@@ -98,9 +98,9 @@ font: 75 20pt &quot;Arial&quot;;</string>
      <widget class="QLabel" name="label_11">
       <property name="geometry">
        <rect>
-        <x>600</x>
+        <x>610</x>
         <y>440</y>
-        <width>491</width>
+        <width>441</width>
         <height>31</height>
        </rect>
       </property>
@@ -115,7 +115,7 @@ font: 75 20pt &quot;Arial&quot;;</string>
      <widget class="QLabel" name="label_2">
       <property name="geometry">
        <rect>
-        <x>610</x>
+        <x>620</x>
         <y>260</y>
         <width>341</width>
         <height>81</height>
@@ -132,9 +132,9 @@ font: 75 72pt &quot;Arial&quot;;</string>
      <widget class="QPushButton" name="doc_btn">
       <property name="geometry">
        <rect>
-        <x>130</x>
+        <x>120</x>
         <y>500</y>
-        <width>271</width>
+        <width>221</width>
         <height>51</height>
        </rect>
       </property>
@@ -163,9 +163,9 @@ QPushButton:active {
      <widget class="QPushButton" name="feedback_btn">
       <property name="geometry">
        <rect>
-        <x>750</x>
+        <x>580</x>
         <y>500</y>
-        <width>271</width>
+        <width>221</width>
         <height>51</height>
        </rect>
       </property>
@@ -194,9 +194,9 @@ QPushButton:active {
      <widget class="QPushButton" name="github_btn">
       <property name="geometry">
        <rect>
-        <x>440</x>
+        <x>350</x>
         <y>500</y>
-        <width>271</width>
+        <width>221</width>
         <height>51</height>
        </rect>
       </property>
@@ -220,6 +220,37 @@ QPushButton:active {
       </property>
       <property name="text">
        <string>Visit Project Repository</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="take_backup">
+      <property name="geometry">
+       <rect>
+        <x>810</x>
+        <y>500</y>
+        <width>221</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color: white;
+font: 87 12pt &quot;Arial Black&quot;;
+	background-color: rgb(35, 134, 54);
+	border-radius:7px;
+	border:1px solid #18ab29;
+}
+
+QPushButton:hover {
+	background:linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
+	background-color:#18ab29;
+}
+QPushButton:active {
+	position:relative;
+	top:2px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Take Backup</string>
       </property>
      </widget>
     </widget>

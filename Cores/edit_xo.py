@@ -3,6 +3,7 @@ from tkinter import*
 from tkinter import messagebox
 from functions import create_json, read_json
 
+
 os.chdir(os.path.dirname(__file__))
 pathes = read_json(r"profile.json")
 conf = pathes["TIC_TAC_TOE_CONF"]
@@ -10,8 +11,10 @@ currant_sittings = read_json(conf)
 p1s = currant_sittings["player1_symbol"]
 p2s = currant_sittings["player2_symbol"]
 
+
 def close():
     exit()
+
 
 def update():
     if p1s_text.get() == "" or p2s_text.get() == "":
@@ -32,6 +35,7 @@ def update():
         finally:
             messagebox.showinfo("[Done]" , "Tic Tac Toe has updated successfully." , parent = xo_edit_window)
             close()
+
 
 xo_edit_window = Tk()
 xo_edit_window.title("mini-PS: Tic Tac Toe Sittings")

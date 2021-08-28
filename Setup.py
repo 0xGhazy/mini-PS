@@ -21,6 +21,7 @@ default_profile_content = {
     "DOCUMENTATION_PATH" : r"{0}\Documentation\Docs.html".format(MAIN_APPLICATION_PATH),
     "VISIT_REPOSITORY" : "explorer 'https://github.com/0xGhazy/mini-PS'",
     "SIGNUP_FRAME_PATH" : r"{0}\Cores\signup_frame.py".format(MAIN_APPLICATION_PATH),
+    "SIGNIN_FRAME_PATH" : r"{0}\Cores\signin_frame.py".format(MAIN_APPLICATION_PATH),
     "FEEDBACK" : r"{0}\Cores\feedback.py".format(MAIN_APPLICATION_PATH)
 }
 
@@ -32,10 +33,12 @@ def install_req():
         print("""\n\n====================  {} Has installed successfully <3  ====================\n\n""".format(i))
         os.system('cls')
 
+
 def create_profile(default_profile_content):
     CD = os.path.dirname(__file__)
     path = r"{0}\Cores\profile.json".format(CD)
     create_json(path, default_profile_content)
+
 
 def signup_call():
     path = MAIN_APPLICATION_PATH + "\Cores\signup_frame.py"
