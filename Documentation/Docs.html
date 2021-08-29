@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,34 +15,26 @@
     <body>
         <script>
             function openPage(pageName, elmnt, color){
-  // Hide all elements with class="tabcontent" by default */
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++){
-    tabcontent[i].style.display = "none";
-  }
-
-  // Remove the background color of all tablinks/buttons
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++){
-    tablinks[i].style.backgroundColor = "";
-  }
-
-  // Show the specific tab content
-  document.getElementById(pageName).style.display = "block";
-
-  // Add the specific color to the button used to open the tab content
-  elmnt.style.backgroundColor = color;
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+            // Hide all elements with class="tabcontent" by default */
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++){tabcontent[i].style.display = "none";}
+            // Remove the background color of all tablinks/buttons
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++){tablinks[i].style.backgroundColor = "";}
+            // Show the specific tab content
+            document.getElementById(pageName).style.display = "block";
+            // Add the specific color to the button used to open the tab content
+            elmnt.style.backgroundColor = color;}
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
         </script>
 
         <center>
+            <hr noshade="" size="3">
             <img src="imgs/img.jpg" width="100%">
-            <h1>Project Documentation</h1>
-            <br>
+            <h1>Documentation</h1>
+            <hr noshade="" size="3">
         </center>
 
 
@@ -175,7 +171,7 @@ document.getElementById("defaultOpen").click();
                 <p>&nbsp;&nbsp;&nbsp;&nbsp; In this section you will find the games that we support in this project and mentioned at the beginning of the document.</p><br>
 
                 <center>
-                    <img>
+                    <img src="imgs/ai.gif" height="400" width="400">
                     <br>
 
 

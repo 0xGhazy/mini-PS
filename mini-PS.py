@@ -66,7 +66,6 @@ class ApplicationUI(QtWidgets.QMainWindow):
         self.take_backup.clicked.connect(self.get_backup)
         
 
-
     # Handling navigaionbuttons #
     def ch_to_home(self):
         """ Changing tab page to home page """
