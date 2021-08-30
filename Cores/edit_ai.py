@@ -7,7 +7,7 @@
 import os
 from tkinter import*
 from tkinter import messagebox
-from functions import create_json, read_json
+from functions import create_json, read_json, logger
 
 # changing to cwd
 os.chdir(os.path.dirname(__file__))
@@ -26,20 +26,21 @@ bulletWidth = currant_sittings["bullet_width"]
 bulletHeight = currant_sittings["bullet_height"]
 bulletColor = currant_sittings["bullet_color"]
 fleetDropSpeed = currant_sittings["fleet_drop_speed"]
-
+logger("Info", "ai_edit.py has loaded currant sittings.")
 
 def close():
     """Closing the frame"""
+    logger("Info", "ai_edit.py has been closed.")
     exit()
 
 
 def update():
     """Reading inputs from text fields and update Alien invasion configurations file."""
-
     # check if Text = Null
     if screen_width_text.get() == "" or screen_height_text.get() == "" or bg_color_text.get() == "" or shipLimit_text.get() == "" or \
         bulletWidth_text.get() == "" or bulletHeight_text.get() == "" or bulletColor_text.get() == "" or fleetDropSpeed_text.get() == "":
         messagebox.showerror("Error" , "All Fields Are Required" , parent = ai_edit_window)
+        logger("Info", "ai_edit.py > All Fields Are Required message appears.")
     else:
         try:
             # check for inbut validation.
@@ -63,18 +64,22 @@ def update():
                 "bullet_color": bc,
                 "fleet_drop_speed": int(fleetDropSpeed_text.get())
             }
+            logger("Info", "ai_edit.py > All inputs are valid.")
         except Exception as error_message:
             # excepting for value errors
             messagebox.showerror("[-] Error" , str(error_message) , parent = ai_edit_window)
+            logger("Warning", f"ai_edit.py > an error was occurred\n\n{error_message}\n\n")
         try:
             # update ai_configurations.json file
             create_json(ALIEN_INVASION_CONF, new_sittings)
         except Exception as error_message:
             # excepting for notfound errors
             messagebox.showerror("[-] Error" , str(error_message) , parent = ai_edit_window)
+            logger("Warning", f"ai_edit.py > an error was occurred\n\n{error_message}\n\n")
         finally:
             # informing the user
             messagebox.showinfo("[+] Done" , "Alien Invasion has updated successfully." , parent = ai_edit_window)
+            logger("Info", f"ai_edit.py > ai_configurations.json was updated successfully.")
             close()
 
 

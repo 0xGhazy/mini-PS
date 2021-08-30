@@ -77,9 +77,9 @@ def backup():
             back.write(f"""\n\n{data}\n\n""")
 
 
-def logger(message, msg_type):
+def logger(msg_type, message):
     os.chdir(os.path.dirname(__file__))
-    log_statement = f"[{msg_type}] :: {datetime.now()} :: {getuser()} :: {message}"
+    log_statement = f"[{msg_type}] :: {datetime.now()} :: {getuser()} :: {message}\n"
     log_path = read_json("Profile.json")
     log_path = log_path["LOGGING_PATH"]
     with open(log_path, "a") as log:
