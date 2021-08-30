@@ -2,7 +2,6 @@ import os
 from Cores.functions import create_json
 
 MAIN_APPLICATION_PATH =  os.path.dirname(__file__)
-# Don't touch it's art :) Hahahaha, no i'm joking any change here will affect the whole application.
 default_profile_content = {
     "DATABASE_PATH": r"{0}\Database\users.db".format(MAIN_APPLICATION_PATH),
     "LOGGING_PATH" : r"{0}\Database\users.db".format(MAIN_APPLICATION_PATH),
