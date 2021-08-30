@@ -50,11 +50,11 @@ fb_edit_window.title("mini-PS: Flappy Birds Sittings")
 fb_edit_window.maxsize(width=500 ,  height=200)
 fb_edit_window.minsize(width=500 ,  height=200)
 # adding inner title
-heading = Label(fb_edit_window , text = "Flappy Birds Edit Sittings" , font = 'Verdana 15 bold')
+heading = Label(fb_edit_window , text = "Flappy Birds Edit Sittings" , font = 'Arial 15 bold')
 heading.place(x=105 , y=10)
 
 
-game_gravity_lbl = Label(fb_edit_window, text = "Game Gravity: " , font = 'Verdana 10 bold')
+game_gravity_lbl = Label(fb_edit_window, text = "Game Gravity: " , font = 'Arial 10 bold')
 game_gravity_lbl.place(x=80,y=90)
 game_gravity_text = Entry(fb_edit_window,width = 40)
 game_gravity_text.insert(0, game_gravity)
@@ -62,11 +62,11 @@ game_gravity_text.place(x=200 , y=90)
 
 
 # handling update button
-btn_update = Button(fb_edit_window, text = "Update", font = 'Verdana 10 bold', command = update)
+btn_update = Button(fb_edit_window, text = "Update", font = 'Arial 10 bold', command = update)
 btn_update.place(x=200, y=150)
 
 # handling Close button
-close_btn = Button(fb_edit_window, text = "Close", font = 'Verdana 10 bold', command = close)
+close_btn = Button(fb_edit_window, text = "Close", font = 'Arial 10 bold', command = close)
 close_btn.place(x=290, y=150)
 
 # calling our program.

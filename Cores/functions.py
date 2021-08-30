@@ -58,8 +58,7 @@ def send_feedback(username, contact_mail, feedback):
 
 def run(command):
     CMD = subprocess.Popen(command, shell=True,stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    CMD.stdout.read()
-    CMD.stderr.read()
+    return CMD.stdout.read().decode(), CMD.stderr.read().decode()
 
 
 def backup():
