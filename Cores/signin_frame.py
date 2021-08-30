@@ -1,6 +1,6 @@
 
-# Coded by:
-# Tested by:
+# Coded by: 
+# Tested by: 
 # coding style: PEP-008
 
 import os
@@ -28,8 +28,6 @@ def clear():
 
 
 def login():
-	username_text.get()
-	password_text.get()
 	if username_text.get() == "" or password_text.get() == "":
 		messagebox.showerror("[-] Error" , "All Fields Are Required" , parent = signin_window)
 		logger("Info", "signin_frame.py All Fields Are Required error.")
@@ -63,8 +61,6 @@ def login():
 		except Exception as error:
 			messagebox.showerror('[-] Error', str(error))
 			logger("Warning", f"signin_frame.py > an error was occurred\n\n{error}\n\n")
-
-
 
 
 # taking object from tkinter
