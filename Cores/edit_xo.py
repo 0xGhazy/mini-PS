@@ -10,7 +10,7 @@ from functions import create_json, read_json, logger
 
 # reading Profile.json to get required pathes
 os.chdir(os.path.dirname(__file__))
-pathes = read_json(r"profile.json")
+pathes = read_json(r"Profile.json")
 conf = pathes["TIC_TAC_TOE_CONF"]
 currant_sittings = read_json(conf)
 p1s = currant_sittings["player1_symbol"]
@@ -19,7 +19,7 @@ p2s = currant_sittings["player2_symbol"]
 
 def close():
     """Closing the frame"""
-    logger("Info", "ai_edit.py has been closed.")
+    logger("Info", "edit_xo.py has been closed.")
     exit()
 
 

@@ -75,8 +75,9 @@ def run(command):
 
 
 def backup():
+    """ Function to read all games configurations files and then copy its content to txt file """
     os.chdir(os.path.dirname(__file__))
-    json_pathes = read_json(f"profile.json")
+    json_pathes = read_json(f"Profile.json")
     ALIEN_INVASION_CONF = json_pathes["ALIEN_INVASION_CONF"]
     FLAPPY_BIRD_CONF = json_pathes["FLAPPY_BIRD_CONF"]
     SNAKE_CONF = json_pathes["SNAKE_CONF"]

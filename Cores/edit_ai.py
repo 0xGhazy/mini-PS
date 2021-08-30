@@ -12,7 +12,7 @@ from functions import create_json, read_json, logger
 # changing to cwd
 os.chdir(os.path.dirname(__file__))
 # reading Profile.json to get required pathes
-pathes = read_json(r"profile.json")
+pathes = read_json(r"Profile.json")
 ALIEN_INVASION_CONF = pathes["ALIEN_INVASION_CONF"]     
 
 

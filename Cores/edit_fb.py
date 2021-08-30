@@ -10,7 +10,7 @@ from functions import create_json, read_json, logger
 
 # reading Profile.json to get required pathes
 os.chdir(os.path.dirname(__file__))
-pathes = read_json(r"profile.json")
+pathes = read_json(r"Profile.json")
 conf = pathes["FLAPPY_BIRD_CONF"]
 currant_sittings = read_json(conf)
 game_gravity = currant_sittings["game_gravity"]
