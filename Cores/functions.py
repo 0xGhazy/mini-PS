@@ -6,9 +6,20 @@ from getpass import getuser
 import subprocess
 from datetime import datetime
 
+
 # handling project email from feedbacks
 PROJECT_EMAIL = "minips941@gmail.com"
 PROJECT_PASSWORD = "123456789pythonproject"
+
+
+def logger(msg_type, message):
+    os.chdir(os.path.dirname(__file__))
+    log_statement = f"[{msg_type}] :: {datetime.now()} :: {getuser()} :: {message}\n"
+    log_path = read_json("Profile.json")
+    log_path = log_path["LOGGING_PATH"]
+    with open(log_path, "a") as log:
+        log.write(log_statement)
+
 
 def calc_hash(plain_text, hash_type = "sha256"):
 	hashed_text = hashlib.new(hash_type)
@@ -49,11 +60,13 @@ def send_feedback(username, contact_mail, feedback):
         smtpserver.ehlo()
         smtpserver.login(PROJECT_EMAIL, PROJECT_PASSWORD)
         # sender, recv, msg
-        smtpserver.sendmail(PROJECT_EMAIL, "m3t4n0y3t@gmail.com", message_content) 
+        logger("Info", "functions.py:send_feedback() > try to send the feedback.")
     except Exception as error:
         print(error)
     finally:
-        smtpserver.quit() 
+        logger("Info", "functions.py:send_feedback() > Done.")
+        smtpserver.quit()
+        logger("Info", "functions.py:send_feedback() > closing the stmp server.")
 
 
 def run(command):
@@ -74,12 +87,3 @@ def backup():
         data = read_json(i)
         with open(f"{Desktop_path}\Backup.txt", "a+") as back:
             back.write(f"""\n\n{data}\n\n""")
-
-
-def logger(msg_type, message):
-    os.chdir(os.path.dirname(__file__))
-    log_statement = f"[{msg_type}] :: {datetime.now()} :: {getuser()} :: {message}\n"
-    log_path = read_json("Profile.json")
-    log_path = log_path["LOGGING_PATH"]
-    with open(log_path, "a") as log:
-        log.write(log_statement)

@@ -20,7 +20,6 @@ SIGNIN_PATH = pathes["SIGNIN_FRAME_PATH"]
 signin_path = r"Cores\signin_frame.py"
 
 
-
 class ApplicationUI(QtWidgets.QMainWindow):
 
     def __init__(self):
@@ -54,7 +53,6 @@ class ApplicationUI(QtWidgets.QMainWindow):
         self.github_btn.clicked.connect(self.visit_github)
         self.feedback_btn.clicked.connect(self.get_feedback)
         self.take_backup.clicked.connect(self.get_backup)
-
 
 
     # Handling navigaionbuttons #
