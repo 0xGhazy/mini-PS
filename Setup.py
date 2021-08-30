@@ -1,10 +1,15 @@
 import os
-from Cores.functions import create_json
+import json
+
 
 MAIN_APPLICATION_PATH =  os.path.dirname(__file__)
-default_profile_content = {
+
+
+def create_profile():
+    # creating profile file [all pathes handler]
+    profile_content = {
     "DATABASE_PATH": r"{0}\Database\users.db".format(MAIN_APPLICATION_PATH),
-    "LOGGING_PATH" : r"{0}\Database\users.db".format(MAIN_APPLICATION_PATH),
+    "LOGGING_PATH" : r"{0}\Database\log.txt".format(MAIN_APPLICATION_PATH),
     "ALIEN_INVASION_PATH" : r"{0}\Games\Alien_Invasion\alien_invasion.py".format(MAIN_APPLICATION_PATH),
     "ALIEN_INVASION_CONF" : r"{0}\Games\Alien_Invasion\ai_configurations.json".format(MAIN_APPLICATION_PATH),
     "ALIEN_INVASION_EDIT" : r"{0}\Cores\edit_ai.py".format(MAIN_APPLICATION_PATH),
@@ -22,29 +27,32 @@ default_profile_content = {
     "SIGNUP_FRAME_PATH" : r"{0}\Cores\signup_frame.py".format(MAIN_APPLICATION_PATH),
     "SIGNIN_FRAME_PATH" : r"{0}\Cores\signin_frame.py".format(MAIN_APPLICATION_PATH),
     "FEEDBACK" : r"{0}\Cores\feedback.py".format(MAIN_APPLICATION_PATH)
-}
+    }
+    path = r"{0}\Cores\Profile.json".format(MAIN_APPLICATION_PATH)
+    with open(path, 'w') as f:
+        json.dump(profile_content, f)
+
 
 def install_req():
+    # installing required modules
     libs = ['pygame', 'PyQt5']
     for i in libs:
         print("[+] Installing {}".format(i))
         os.system('pip install {}'.format(i))
-        print("""\n\n====================  {} Has installed successfully <3  ====================\n\n""".format(i))
-        os.system('cls')
-
-
-def create_profile(default_profile_content):
-    CD = os.path.dirname(__file__)
-    path = r"{0}\Cores\profile.json".format(CD)
-    create_json(path, default_profile_content)
 
 
 def signup_call():
+    # calling signup_frame
     path = MAIN_APPLICATION_PATH + "\Cores\signup_frame.py"
     os.system(path)
 
 
-if __name__ == '__main__':
+def main():
     install_req()
-    create_profile(default_profile_content)
+    create_profile()
     signup_call()
+    
+
+
+# calling our ptogram.
+main()

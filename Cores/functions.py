@@ -2,9 +2,9 @@ import os
 import json
 import smtplib
 import hashlib
-import getpass
+from getpass import getuser
 import subprocess
-#from Profile import DOCUMENTATION_PATH, LOGGING_PATH
+from datetime import datetime
 
 # handling project email from feedbacks
 PROJECT_EMAIL = "minips941@gmail.com"
@@ -18,9 +18,9 @@ def calc_hash(plain_text, hash_type = "sha256"):
 
 
 def create_json(file_name, data_dictionary):
-    os.chdir(os.path.dirname(__file__))
     with open(file_name, 'w') as f:
         json.dump(data_dictionary, f)
+
 
 def read_json(file_path):
     with open(file_path, 'r+') as f:
@@ -69,9 +69,18 @@ def backup():
     FLAPPY_BIRD_CONF = json_pathes["FLAPPY_BIRD_CONF"]
     SNAKE_CONF = json_pathes["SNAKE_CONF"]
     TIC_TAC_TOE_CONF = json_pathes["TIC_TAC_TOE_CONF"]
-    Desktop_path = r"C:\Users\{0}\Desktop".format(getpass.getuser())
+    Desktop_path = r"C:\Users\{0}\Desktop".format(getuser())
     l = [ALIEN_INVASION_CONF, FLAPPY_BIRD_CONF, SNAKE_CONF, TIC_TAC_TOE_CONF]
     for i in l:
         data = read_json(i)
         with open(f"{Desktop_path}\Backup.txt", "a+") as back:
             back.write(f"""\n\n{data}\n\n""")
+
+
+def logger(message, msg_type):
+    os.chdir(os.path.dirname(__file__))
+    log_statement = f"[{msg_type}] :: {datetime.now()} :: {getuser()} :: {message}"
+    log_path = read_json("Profile.json")
+    log_path = log_path["LOGGING_PATH"]
+    with open(log_path, "a") as log:
+        log.write(log_statement)
