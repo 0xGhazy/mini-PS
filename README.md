@@ -33,10 +33,9 @@ you can access project documentation from `Docs.html` file in `Documentation` di
 
 
 # Team Members
-
 - Hossam Hamdy
 - Sameh Elisha
 - Engy Essam
-- Asmaa Elnggar
+- Asmaa Elnagar
 - Taqwa Mohamed
 - Gehad Ahmed
