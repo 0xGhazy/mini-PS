@@ -27,7 +27,7 @@ h2 {
 }
 
 a {
-    color: #0083e8;
+    color: #0291ff;
 }
 
 b, strong {
@@ -59,6 +59,7 @@ img {
     }
 }
 
+/* time line */
 * {
   box-sizing: border-box;
 }
@@ -192,84 +193,4 @@ body {
   .right {
     left: 0%;
   }
-}
-
-
-
-
-
-/**/
-
-
-/* Set height of body and the document to 100% to enable "full page tabs" */
-
-/* Style tab links */
-.tablink {
-  background-color: #555;
-  color: white;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 16%;
-}
-
-.tablink:hover {
-  background-color: #777;
-}
-
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-  color: rgb(0, 0, 0);
-  display: none;
-  padding: 100px 20px;
-  height: 90%;
-}
-
-#hossam {background-color: rgb(255, 255, 255);}
-#News {background-color: rgb(255, 255, 255);}
-#Contact {background-color: rgb(255, 255, 255);}
-#About {background-color: rgb(255, 255, 255);}
-#About {background-color: rgb(255, 255, 255);}
-#About {background-color: rgb(255, 255, 255);}
-
-
-/**/
-
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-}
-
-.title {
-  color: grey;
-  font-size: 18px;
-}
-
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
-}
-
-button:hover, a:hover {
-  opacity: 0.7;
 }

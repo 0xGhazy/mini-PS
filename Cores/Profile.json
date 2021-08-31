@@ -1,0 +1,11 @@
+{"DATABASE_PATH": "c:\\Users\\0xGhazy\\Desktop\\mini-PS\\Database\\users.db",
+    "LOGGING_PATH": "c:\\Users\\0xGhazy\\Desktop\\mini-PS\\Database\\log.txt",
+    "ALIEN_INVASION_PATH": "c:\\Users\\0xGhazy\\Desktop\\mini-PS\\Games\\Alien_Invasion\\alien_invasion.py",
+    "ALIEN_INVASION_CONF": "c:\\Users\\0xGhazy\\Desktop\\mini-PS\\Games\\Alien_Invasion\\ai_configurations.json",
+    "FLAPPY_BIRD_PATH": "c:\\Users\\0xGhazy\\Desktop\\mini-PS\\Games\\Flappy_Bird\\fb_game.py",
+    "FLAPPY_BIRD_CONF": "c:\\Users\\0xGhazy\\Desktop\\mini-PS\\Games\\Flappy_Bird\\fb_configuration.json",
+    "SNAKE_PATH": "c:\\Users\\0xGhazy\\Desktop\\mini-PS\\Games\\Snake\\Snake.py",
+    "SNAKE_CONF": "c:\\Users\\0xGhazy\\Desktop\\mini-PS\\Games\\Snake\\sn_configuration.json",
+    "TIC_TAC_TOE_PATH": "c:\\Users\\0xGhazy\\Desktop\\mini-PS\\Games\\TicTacToe\\XO.py",
+    "TIC_TAC_TOE_CONF": "c:\\Users\\0xGhazy\\Desktop\\mini-PS\\Games\\TicTacToe\\xo_configuration.json",
+    "DOCUMENTATION_PATH": "c:\\Users\\0xGhazy\\Desktop\\mini-PS\\Documentation\\Docs.html", "VISIT_REPOSITORY": "explorer 'https://github.com/0xGhazy/mini-PS'", "SIGNUP_FRAME_PATH": "c:\\Users\\0xGhazy\\Desktop\\mini-PS\\Cores\\signup_frame.py", "SIGNIN_FRAME_PATH": "c:\\Users\\0xGhazy\\Desktop\\mini-PS\\Cores\\signin_frame.py", "FEEDBACK": "c:\\Users\\0xGhazy\\Desktop\\mini-PS\\Cores\\feedback.py"}
