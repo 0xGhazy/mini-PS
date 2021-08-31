@@ -30,17 +30,16 @@
                 <li><a href="#Privacy">Privacy Policy</a></li>
                 <li><a href="#References">References</a></li>
             </ul>
-            <hr>
+
+        <hr>
 
         <h2 id="Overview">Project Overview</h2>
             <p>
                 &nbsp;&nbsp;&nbsp;&nbsp; Welcome to mini-PS, Our project is an open source mini-PlayStation application that contains 4 open source games <b>(Alien invasion-Flappy Bird - Snake-Tic Tac Toe)</b>,
-                whose source code has been Refactored by team members to add the ability to control the settings available in each game by a simple graphical user inter face (GUI) Based on Tkinter and PyQt5.<br><br>
+                whose source code has been Refactored by team members to add the ability to control the settings available in each game by a simple graphical user interface (GUI) Based on Tkinter and PyQt5.<br><br>
             </p>
 
-
-            <hr>
-
+        <hr>
 
         <h2 id="tech">Technologies and Techniques</h2>
         <table cellspacing="15px">
@@ -94,9 +93,7 @@
             </tr>
         </table>
 
-
         <hr>
-
 
         <h2 id="db_files">Database & Files</h2>
         <p>
@@ -105,21 +102,26 @@
         
         <center><img src="imgs/code_snips/db.jpg" height="600px" width="100%"></center>
         <p>
-            ;lk;l;l
+            &nbsp;&nbsp;&nbsp;&nbsp; We have used <b>SQLITE3</b> database, In it we store some user information such as first and last name, username, e-mail and password, and all this data is of TEXT data type.<br><br>
+            This data is requested from the new user <b>signup_frame.py</b> and then we add it to the database.
+            In the <b>signin_frame.py</b> frame, we ask the user for the user name and password to verify that he is registered in the program data and to be able to make an evaluation of the program.<br><br>
+            <b>username</b> and <b>email_address</b> are the primary keys in this table <b>`users_info`</b> and can never be repeated throughout the entire table.
         </p><br>
         
         <center><img src="imgs/code_snips/json_file.png"  width="100%"></center>
         <p>
-            ;lk;l;l
+            &nbsp;&nbsp;&nbsp;&nbsp; In the file pictured above is one of the parts of the installation file code.
+            This code is an example of <b>`manipulating files`</b> and it is one of the conditions required in the project.
+            This code creates a file that contains all the paths in the program and is considered the link between the design and the code.
+            There is more than one file with the same format and idea within the program files, such as the game settings files, and they are 4 files.
         </p><br>
 
-        
         <hr>
 
-
         <h2 id="games">Games Examples</h2>
-        In this section you will find the games that we support in this project and mentioned at the beginning of the document.
-            <table>
+            &nbsp;&nbsp;&nbsp;&nbsp; In this section of the document you will find information about each game that is supported within the program,
+            all the existing games are open source and you will find the source code of the original in the references below.
+            <table cellspacing="10px">
                 <tr>
                     <td>
                         <center>
@@ -128,13 +130,26 @@
                         </center>
                     </td>
                     <td>
-                        <p>In this section you will find the games that we support in this project and mentioned at the beginning of the document.</p>
+                        <p>
+                            A simple game that depends on the two directions (Right and Left) to control the spaceship. and using space bar button to shot aliens ships.<br><br>
+                            Hossam hamdy made some modifications in the code so that we were able to make the game <b>`settings.py`</b><br>
+                            file read the settings from an external file <b>`ai_configurations.json`</b> using json module.<br><br>
+                            Then Implementing edit_ai.py frame to reads users input to update sittings file.<br><br>
+                            Then any action we do in the external settings file is implemented in the original settings of the game,<br>
+                            without the user modifying the source code. This game depends on pygame module.<br><br>
+                        </p>
                     </td>
                 </tr><br>
-                
+
                 <tr>
                     <td>
-                        <p>In this section you will find the games that we support in this project and mentioned at the beginning of the document.</p> 
+                        <p>
+                            A simple game that depends on Space bar button to avoid the pips.<br><br>
+                            Sameh Elisha made some modifications in the code so that we were able to make the game reads the settings from an external file <b>`fb_configurations.json`</b><br><br>
+                            Then Implementing edit_fb.py frame to reads users input to update sittings file.<br><br>
+                            Then any action we do in the external settings file is implemented in the original settings of the game,<br>
+                            without the user modifying the source code. This game depends on pygame module.<br><br>
+                        </p> 
                     </td>
                     <td>
                         <center>
@@ -152,13 +167,25 @@
                         </center>
                     </td>
                     <td>
-                        <p>In this section you will find the games that we support in this project and mentioned at the beginning of the document.</p>
+                        <p>
+                            A simple game that depends on Space bar button to avoid the pips.<br><br>
+                            Asmaa elnggar made some modifications in the code so that we were able to make the game reads the settings from an external file <b>`sn_configurations.json`</b><br><br>
+                            Then Implementing edit_sn.py frame to reads users input to update sittings file.<br><br>
+                            Then any action we do in the external settings file is implemented in the original settings of the game,<br>
+                            without the user modifying the source code. This game depends on pygame module.<br><br>
+                        </p>
                     </td>
                 </tr><br>
 
                 <tr>
                     <td>
-                        <p>In this section you will find the games that we support in this project and mentioned at the beginning of the document.</p> 
+                        <p>
+                            A simple game that depends on left click to choose where to put your symbol.<br><br>
+                            Engy Essam made some modifications in the code so that we were able to make the game reads the settings from an external file <b>`xo_configurations.json`</b><br><br>
+                            Then Implementing edit_xo.py frame to reads users input to update sittings file.<br><br>
+                            Then any action we do in the external settings file is implemented in the original settings of the game,<br>
+                            without the user modifying the source code. This game depends on pygame module.<br><br>
+                        </p> 
                     </td>
                     <td>
                         <center>
@@ -169,16 +196,24 @@
                 </tr><br>
             </table>
 
-
         <hr>
 
-
         <h2 id="appgui">Application GUI</h2>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp; ------</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp; In this section you will find a picture and an explanation of most of the interfaces in the program with unique and unobtrusive functions.</p>
 
             <center><img src="imgs/gui_imgs/main_page.png" width="100%">
             <h3>Main application Window</h3>
-            <p></p>
+            <p>
+                In the main program interface has been programmed using <b>PyQt5</b>
+
+                On the left, you will find a group of buttons, one for the home page (displayed here, four for games, and another for exiting the program.
+
+                The Open Documentation button will display the file you are reading now, and the Visit Repository button will open the project's repository on GitHub.
+
+                The Feedback button takes simple information from the user and sends his message to us on the project's e-mail.
+
+                The last button takes a copy of the settings and sends it to the user via his e-mail from database.
+            </p>
             </center><br>
 
             <center><img src="imgs/gui_imgs/game_page.png" width="100%">
@@ -197,7 +232,6 @@
             </center><br>
 
         <hr>
-
 
         <h2 id="snips">Code Snips</h2>
         <p>&nbsp;&nbsp;&nbsp;&nbsp; ------</p>
@@ -265,7 +299,6 @@
                 </td>
             </tr>
         </table>
-
 
         <hr style="border-style: dotted none none; width:20%; border-width: 7px;">
 
@@ -349,7 +382,6 @@
             <h3>Calc hash function @ functions.py</h3>
             </center><br>
         </p>
-
 
         <hr>
 
