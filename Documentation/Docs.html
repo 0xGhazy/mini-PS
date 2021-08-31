@@ -217,15 +217,17 @@
             </center><br>
 
             <center><img src="imgs/gui_imgs/game_page.png" width="100%">
-            <h3>Game tabe function</h3>
+            <h3>Game tabe</h3>
             <p>
-                
+                Each game has a window that contains a simple picture of it, the way to play, the start of the game and the opening of its modification interface.
             </p>
             </center><br>
 
             <center><img src="imgs/gui_imgs/feedback.png" width="100%" height="100%">
             <h3>Feedback.py frame.</h3>
             <p>
+                In the feedback window, we ask the user to enter his name and e-mail that we can communicate with him through in case we want to thank him or respond to complaints about his experience of the program.
+                We also ask them to evaluate the program and then send all this information as an e-mail message to the e-mail designated for the project on Gmail via a stmp.gmail server.<br><br>
 
             </p>
             </center><br>
@@ -233,28 +235,34 @@
             <center><img src="imgs/gui_imgs/edit_page.png" width="100%" height="100%">
             <h3>Alien Invasion edit sittings frame.</h3>
             <p>
-
+                In this window, the current values of all the adjustable game settings are displayed, then the user is allowed to enter new values,
+                and when pressing the update button, the new values are written in the game’s settings file. Each game has a similar interface.
             </p>
             </center><br>
 
         <hr>
 
         <h2 id="snips">Code Snips</h2>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp; ------</p>
 
             <center><img src="imgs/code_snips/logger.png" width="100%">
             <h3>Logger function @ functions.py</h3>
-            <p></p>
+            <p>
+
+            </p>
             </center><br>
 
-            <center><img src="imgs/code_snips/signup.png" width="100%">
+            <center><img src="imgs/code_snips/signup.png" width="100%" height="700">
             <h3>Signup function</h3>
-            <p></p>
+            <p>
+
+            </p>
             </center><br>
 
             <center><img src="imgs/code_snips/tkinter.png" width="100%" height="100%">
             <h3>Init edit_fb.py frame.</h3>
-            <p></p>
+            <p>
+
+            </p>
             </center><br>
 
         <hr>
@@ -362,28 +370,22 @@
         <hr>
 
         <h2 id="Privacy">Privacy Policy</h2>
-        <h3>What data do we collect؟</h3>
+        <h3>What data do we collect?</h3>
         <p>
-            As a user, we collect information that has been mentioned in the part of the databases, which is 
-            the first and last name, phone number, email, gender, credit card number and its code, as well as the country and password.
+            We collect basic user information such as first and last name, email, username and password, and we also collect event messages in a file.
+            All this data is stored on the user's device and we do not deal with it outside this scope, we do not have any accountability in the event of the loss of this data.
         </p>
 
 
         <h3>Information usage.</h3>
         <p>
-            It does not use this data for any profit or other purpose. What you write on your device stays on 
-            your device. You can view the code for the project to make sure, which means that we are not 
-            responsible for any data leakage that occurs through this application. Security depends on what has 
-            been provided in the program. Data is not tampered with in the database, so the security of your 
-            personal device or the security of the network connected to it is the responsibility of the user himself 
-            and the development team has no responsibility for what happens.
+            We do not use this data for any profit purposes or use it in any data analysis, at least until this moment.
+            We collect e-mail to send you feedback feedback and current game settings if a backup copy is requested.
         </p>
 
         <h3>Information security.</h3>
         <p>
-            All data is stored in the database as plain text, and we put an encryption algorithm that stores 
-            the data encrypted inside the database, so no breach process occurs, and all data is leaked, which helps 
-            to realize the situation a little faster. The version uploaded to Git Hub contains MD5 Hashing.
+            Users' passwords are stored encrypted and their original text can only be retrieved by the user, so we have programmed a function that does the hashing (SHA256) of the text.
             <center><img src="imgs/code_snips/hashing.png" width="100%">
             <h3>Calc hash function @ functions.py</h3>
             </center><br>
