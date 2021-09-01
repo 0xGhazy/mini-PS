@@ -60,6 +60,7 @@ def send_feedback(username, contact_mail, feedback):
         smtpserver.ehlo()
         smtpserver.login(PROJECT_EMAIL, PROJECT_PASSWORD)
         # sender, recv, msg
+        smtpserver.sendmail(PROJECT_EMAIL, contact_mail, feedback)
         logger("Info", "functions.py:send_feedback() > try to send the feedback.")
     except Exception as error:
         print(error)
@@ -73,8 +74,8 @@ def run(command):
     CMD = subprocess.Popen(command, shell=True,stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     return CMD.stdout.read().decode(), CMD.stderr.read().decode()
 
-
-def backup():
+# Updating This function to send backup to user account.
+def backup(recver_email):
     """ Function to read all games configurations files and then copy its content to txt file """
     os.chdir(os.path.dirname(__file__))
     json_pathes = read_json(f"Profile.json")
@@ -84,7 +85,10 @@ def backup():
     TIC_TAC_TOE_CONF = json_pathes["TIC_TAC_TOE_CONF"]
     Desktop_path = r"C:\Users\{0}\Desktop".format(getuser())
     l = [ALIEN_INVASION_CONF, FLAPPY_BIRD_CONF, SNAKE_CONF, TIC_TAC_TOE_CONF]
+    message = ""
     for i in l:
         data = read_json(i)
         with open(f"{Desktop_path}\Backup.txt", "a+") as back:
-            back.write(f"""\n\n{data}\n\n""")
+            message += f"\n\n{data}\n\n"
+    print(message)
+    send_feedback(PROJECT_EMAIL, recver_email, message)

@@ -141,7 +141,6 @@ class ApplicationUI(QtWidgets.QMainWindow):
         run(VISIT_REPOSITORY)
 
     def get_feedback(self):
-        run(signin_path)
         run(FEEDBACK)
 
     def get_backup(self):
